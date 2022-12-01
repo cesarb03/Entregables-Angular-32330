@@ -23,4 +23,6 @@ export class AlumnosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+
 }

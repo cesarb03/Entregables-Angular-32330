@@ -16,4 +16,7 @@ constructor(
         this.createdAt= createdAt;
         this.isTop10= isTop10;
 }
+alternarTop10(){
+    this.isTop10 = !this.isTop10;
+}
 }
