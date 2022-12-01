@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Fecha de Creación</th>
+            <th scope="col">Es Top 10</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr [ngClass]="student.isTop10 ? 'table-success' : 'table-danger'" *ngFor="let student of students">
+            <th scope="row">{{student.id}}</th>
+            <td>{{student.firstName}}</td>
+            <td>{{student.lastName}}</td>
+            <td>{{student.createdAt | date :'short'}}</td>
+            <td>{{student.isTop10}}</td>
+        </tr>
+    </tbody>
+</table>
