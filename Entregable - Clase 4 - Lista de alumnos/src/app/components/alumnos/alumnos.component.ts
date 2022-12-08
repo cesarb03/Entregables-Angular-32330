@@ -1,28 +1,51 @@
-import { Component, OnInit } from '@angular/core';
-import { Student } from '../../models/students';
+import { Component } from '@angular/core';
+
+import { Student } from 'src/app/interface/students.interface';
 
 @Component({
   selector: 'app-alumnos',
   templateUrl: './alumnos.component.html',
-  styleUrls: ['./alumnos.component.css']
+  styleUrls: ['./alumnos.component.css'],
 })
-export class AlumnosComponent implements OnInit {
-  students: Student[] =  [
-    new Student(1,'Lionel', 'Messi', new Date ('1987-06-24'), true),
-    new Student(2,'Lionel', 'Messi', new Date ('1987-06-24'), false),
-    new Student(3,'Lionel', 'Messi', new Date ('1987-06-24'), true),
-    new Student(4,'Lionel', 'Messi', new Date ('1987-06-24'), true),
-    new Student(5, 'Lionel', 'Messi', new Date ('1987-06-24'), false),
-    new Student(6, 'Lionel', 'Messi', new Date ('1987-06-24'), true),
-    new Student(7, 'Lionel', 'Messi', new Date ('1987-06-24'), true),
-    new Student(8, 'Lionel', 'Messi', new Date ('1987-06-24'), true),
-    new Student(9, 'Lionel', 'Messi', new Date ('1987-06-24'), true)
-  ]
-  constructor() { }
+export class AlumnosComponent {
+  // public prueba: boolean[]
 
-  ngOnInit(): void {
-  }
-
-
-
+  students: Student[] = [
+    {
+      id: 1,
+      firstName: 'Lionel',
+      lastName: 'Messi',
+      createdAt: new Date('1987-06-24'),
+      isTop10: false,
+    },
+    {
+      id: 2,
+      firstName: 'Lionel',
+      lastName: 'Messi',
+      createdAt: new Date('1987-06-24'),
+      isTop10: false,
+    },
+    {
+      id: 3,
+      firstName: 'Lionel',
+      lastName: 'Messi',
+      createdAt: new Date('1987-06-24'),
+      isTop10: true,
+    },
+    {
+      id: 4,
+      firstName: 'Lionel',
+      lastName: 'Messi',
+      createdAt: new Date('1987-06-24'),
+      isTop10: false,
+    },
+  ];
 }
+  // alternarTop10(students: Student): void {
+  //   this.prueba = students.map(function (student) {
+  //     return student.isTop10;
+  //   });
+  //   this.prueba = !this.prueba;
+  //   console.log(prueba);
+  // }
+
